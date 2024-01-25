@@ -1,0 +1,50 @@
+$title:#848fad;
+$second: #fff;
+$third: #cad0eb;
+
+.switchSection{
+    display: flex;
+    margin-right: 45px;
+    align-items: center;
+    justify-content: end;
+    span{
+        color: $title;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+    .toggleContainer {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 15px;
+        display: flex;
+        cursor: pointer;
+        overflow: hidden;
+    
+        &.on {
+            background-color: $third;
+        }
+    
+        &.off {
+            background-color: $second;
+        }
+    
+        .btn {
+            width: 20px;
+            height: 20px;
+            border: 2px solid $second;
+            background-color: $third;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+    
+        &.on {
+            .btn {
+                transform: translateX(20px);
+                background-color: $second;
+                border: 2px solid $third;
+            }
+        }
+    }
+}

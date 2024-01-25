@@ -1,0 +1,73 @@
+$back: #fff;
+$primary: #7a8fcc;
+$third: #cad0eb;
+
+li{
+    list-style-type: none;
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: $back;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 340px;
+    .decorationLine{
+        height: 100%;
+        width: 5px;
+        background-color: $primary;
+        margin-right: 15px;
+    }
+    
+    .checkboxContainer{
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+
+        .checkbox{
+            display: none;
+            &:checked + .checkmark::after {
+                content: "";
+                position: absolute;
+                left: 7px;
+                top: 3px;
+                width: 4px;
+                height: 9px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+            &:checked + .checkmark{
+                background-color: $primary;
+            }
+        }
+    
+        .checkmark {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: $back;
+            border: 1px $primary solid;
+            border-radius: 3px;
+            position: relative;
+            cursor: pointer;
+        }
+    }
+
+    .todoText{
+        color: $primary;
+    }
+
+    .btnDelete {
+        background-color: transparent; 
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 15px;
+    }
+
+}

@@ -1,0 +1,120 @@
+$back-top: #f0f7ff;
+$back-bottom: #edeeff;
+$title:#848fad;
+$font:#abb6c7;
+$primary: #7a8fcc;
+$second: #fff;
+$rate: #93adfa;
+$third: #cad0eb;
+
+
+.todoListContainer{
+    width: 400px;
+    height: 540px;
+    background: linear-gradient(to bottom, #f0f7ff, #edeeff);
+    position: relative;
+
+    .title{
+        color: $title;
+        font-weight: 400;
+        font-size: 24px;
+        padding: 30px 5% 0px 5%;
+    }
+    .description{
+        color: $font;
+        font-size: 11px;
+        padding: 0px 5% 0px 5%;
+    }
+    hr{
+        height: 2px;
+        width: calc(90% - 20px);
+        background-color: $primary;
+        margin: 7px 0;
+        margin-left: 18px;
+    }
+    .mainSection{
+        width: 90%;
+        margin: auto;
+        .completionRateContainer{
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            .progress-rate{
+                width: 10%;
+                font-size: 16px;
+                margin-right: 15px;
+                color: $title;
+            }
+            .progress-bar {
+                width: calc(90% - 35px);
+                height: 12px;
+                background-color: $second;
+                border-radius: 8px;
+                overflow: hidden;
+                .progress {
+                    height: 12px;
+                    background-color: $rate;
+                    border-radius: 8px;
+                    transition: width 0.3s ease-in-out;
+                }
+            }
+        }
+        .todoLists{
+            height: 220px;
+            width: 380px;
+            overflow-y: scroll;
+        }
+        .todoLists::-webkit-scrollbar {
+            background-color: transparent;
+            width: 8px;
+        }
+        .todoLists::-webkit-scrollbar-thumb {
+            background: $third;
+            border-radius: 10px;
+        }
+
+    }
+
+    .addSection{
+        margin-left: 18px;
+        position: absolute;
+        bottom: 20px;
+        .btnContanier{
+            display: flex;
+            align-items: center;
+            
+        }
+        p{
+            color: $title;
+            margin-bottom: 5px;
+        }
+        .addInput{
+            width: 280px;
+            margin-right: 5px;
+            height: 45px;
+            border: none;
+            border-radius: 3px;
+            color: $title;
+            padding-left: 5px;
+            &:focus {
+                outline: 1px solid $primary;
+            }
+        }
+        .btnAdd{
+            width: 55px;
+            height: 45px;
+            border: none;
+            border-radius: 3px;
+            background-color: $primary;
+            cursor: pointer;
+            color: $second;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
+}
